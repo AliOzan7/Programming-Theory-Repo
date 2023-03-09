@@ -47,6 +47,7 @@ public class Shape : MonoBehaviour
 
     public void DisplayText()
     {
+        // ABSTRACTION
         SetDisplayText();
         StartCoroutine(PerformDisplayDance());
         Debug.Log(displayText.text);
