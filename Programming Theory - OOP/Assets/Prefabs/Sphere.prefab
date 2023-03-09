@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 3077309885983495541}
   - component: {fileID: 3077309885983495546}
   - component: {fileID: 3077309885983495542}
+  - component: {fileID: 701548477961247462}
   - component: {fileID: 1616180217}
   m_Layer: 0
   m_Name: Sphere
@@ -369,7 +370,21 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3216bac8620d43e498b05a76f8baeb8f, type: 2}
   - {fileID: 2100000, guid: 7db0150c2d1042c45bb5c37083419490, type: 2}
   - {fileID: 2100000, guid: 9c1c54c5badcd254a8da9defe08040b5, type: 2}
+  - {fileID: 2100000, guid: eeca529d4858b324bb913a4a14d540f8, type: 2}
   displayDanceDuration: 1.5
+--- !u!114 &701548477961247462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077309885983495547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ccf3a1a3bb01740958372463d4f07e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 7
 --- !u!54 &1616180217
 Rigidbody:
   m_ObjectHideFlags: 0

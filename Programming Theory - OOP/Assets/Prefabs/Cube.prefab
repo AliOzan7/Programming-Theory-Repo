@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 8803103373901932601}
   - component: {fileID: 8803103373901932606}
   - component: {fileID: 8803103373901932602}
+  - component: {fileID: 5259311291394590949}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -368,4 +369,18 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3216bac8620d43e498b05a76f8baeb8f, type: 2}
   - {fileID: 2100000, guid: 7db0150c2d1042c45bb5c37083419490, type: 2}
   - {fileID: 2100000, guid: 9c1c54c5badcd254a8da9defe08040b5, type: 2}
+  - {fileID: 2100000, guid: eeca529d4858b324bb913a4a14d540f8, type: 2}
   displayDanceDuration: 2
+--- !u!114 &5259311291394590949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803103373901932607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ccf3a1a3bb01740958372463d4f07e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 7

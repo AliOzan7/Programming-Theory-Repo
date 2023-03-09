@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public enum ShapeColor { Blue, Red, Orange, Green}
+public enum ShapeColor { Blue, Red, Orange, Green, Pink}
 
 public class Shape : MonoBehaviour
 {
@@ -38,7 +38,11 @@ public class Shape : MonoBehaviour
     public ShapeColor Color
     {
         get { return color; }
-        set { color = value; }
+        set 
+        { 
+            color = value;
+            gameObject.GetComponent<Renderer>().material = materials[(int)color];
+        }
     }
 
     public void DisplayText()
@@ -52,7 +56,7 @@ public class Shape : MonoBehaviour
 
     public virtual void SetDisplayText()
     {
-        displayText.text = "This is a " + materials[(int)color].name + " colored shape named " + objectName;
+        displayText.text = "This is a " + gameObject.GetComponent<Renderer>().material.name + " colored shape named " + objectName;
     }
 
     public virtual IEnumerator PerformDisplayDance()
