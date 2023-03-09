@@ -12,6 +12,8 @@ public class Shape : MonoBehaviour
     [SerializeField] protected ShapeColor color;
     [SerializeField] protected TMP_Text displayText;
     [SerializeField] protected Material[] materials;
+    [SerializeField] protected float displayDanceDuration = 2f;
+    protected bool isDancing = false;
 
     private void Awake()
     {
@@ -42,9 +44,10 @@ public class Shape : MonoBehaviour
     public void DisplayText()
     {
         SetDisplayText();
+        StartCoroutine(PerformDisplayDance());
         Debug.Log(displayText.text);
         displayText.enabled = true;
-        Invoke("DisableDisplayText", 2f);
+        Invoke(nameof(DisableDisplayText), displayDanceDuration);
     }
 
     public virtual void SetDisplayText()
@@ -52,8 +55,15 @@ public class Shape : MonoBehaviour
         displayText.text = "This is a " + materials[(int)color].name + " colored shape named " + objectName;
     }
 
+    public virtual IEnumerator PerformDisplayDance()
+    {
+        return null;
+    }
+
     private void DisableDisplayText()
-    { displayText.enabled = false; }
+    { 
+        displayText.enabled = false; 
+    }
 
     private void OnMouseDown()
     {

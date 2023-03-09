@@ -13,4 +13,16 @@ public class Sphere : Shape
     {
         displayText.text = "This is a " + materials[(int)color].name + " colored SPHERE named " + objectName;
     }
+
+    // POLYMORPHISM
+    public override IEnumerator PerformDisplayDance()
+    {
+        if (!isDancing)
+        {
+            isDancing = true;
+            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
+            yield return new WaitForSeconds(displayDanceDuration);
+            isDancing = false;
+        }
+    }
 }
